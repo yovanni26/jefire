@@ -1,6 +1,8 @@
 node {
 stage ('SCM Checkout'){
 git 'https://github.com/yovanni26/jefire'
-stage ('compile-Package')
+}
+stage ('compile-Package'){
+sh 'mv package'
 }
 }
