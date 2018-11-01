@@ -3,6 +3,7 @@ stage ('SCM Checkout'){
 git 'https://github.com/yovanni26/jefire'
 }
 stage ('compile-Package'){
-sh 'mv package'
+def mvHOME = tool name: 'MAVEN_HOME', type: 'maven'
+sh "${mvHOME}/bin/mvn package"
 }
 }
