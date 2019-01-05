@@ -1,6 +1,6 @@
 node {
 stage ('SCM Checkout'){
-git 'https://github.com/yovanni26/jefire'
+git 'https://github.com/yovanni26/jefire.git'
 }
 stage ('compile-Package'){
 sh "mvn test"
